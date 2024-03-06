@@ -10,5 +10,17 @@
                 "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/wg-easy.yaml"
             }
         ]
+    },
+    {
+        "logo": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgres.png",
+        "title": "Postgres",
+        "description": "The PostgreSQL object-relational database system provides reliability and data integrity.",
+        "category": "SQL Database",
+        "stacks": [
+            {
+                "title": "Postgres",
+                "stack": "https://raw.githubusercontent.com/swiftwave-org/app-store/main/stacks/postgres.yaml"
+            }
+        ]
     }
 ]

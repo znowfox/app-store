@@ -1,0 +1,55 @@
+services:
+  "{{STACK_NAME}}_postgres":
+    environment:
+      - "POSTGRES_PASSWORD={{POSTGRES_PASSWORD}}"
+      - "POSTGRES_USER={{POSTGRES_USER}}"
+      - "POSTGRES_DB={{POSTGRES_DB}}"
+      - "PGDATA=/var/lib/postgresql/data/pgdata"
+    image: "docker.io/postgres:{{VERSION}}"
+    volumes:
+      - "{{STORAGE}}:/var/lib/postgresql/data/pgdata"
+docs:
+  logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/postgres.png"
+  name: "PostgreSQL"
+  description: "The PostgreSQL object-relational database system provides reliability and data integrity." 
+  readme_description:  "PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance. As a database server, its primary function is to store data, securely and supporting best practices, and retrieve it later, as requested by other software applications, be it those on the same computer or those running on another computer across a network (including the Internet). It can handle workloads ranging from small single-machine applications to large Internet-facing applications with many concurrent users. Recent versions also provide replication of the database itself for security and scalability.\n\nPostgreSQL implements the majority of the SQL:2011 standard, is ACID-compliant and transactional (including most DDL statements) avoiding locking issues using multiversion concurrency control (MVCC), provides immunity to dirty reads and full serializability; handles complex SQL queries using many indexing methods that are not available in other databases; has updateable views and materialized views, triggers, foreign keys; supports functions and stored procedures, and other expandability, and has a large number of extensions written by third parties. In addition to the possibility of working with the major proprietary and open source databases, PostgreSQL supports migration from them, by its extensive standard SQL support and available migration tools. And if proprietary extensions had been used, by its extensibility that can emulate many through some built-in and third-party open source compatibility extensions, such as for Oracle."
+  iframe_video_embed: ""
+  variables:
+    VERSION:
+      title: "Language"
+      description: "The language to use for the web interface"
+      default: "en"
+      type: options
+      options:
+      - title: English
+        value: en
+      - title: German
+        value: de
+      - title: Spanish
+        value: es
+      - title: French
+        value: fr
+    POSTGRES_PASSWORD:
+      title: "Wireguard Host"
+      description: "The public hostname of your VPN server"
+      default: ""
+      type: text
+      options:
+    POSTGRES_PASSWORD:
+      title: "Wireguard Host"
+      description: "The public hostname of your VPN server"
+      default: ""
+      type: text
+      options:
+    POSTGRES_PASSWORD:
+      title: "Wireguard Host"
+      description: "The public hostname of your VPN server"
+      default: ""
+      type: text
+      options:
+    STORAGE:
+      title: "Storage"
+      description: "The storage location for the Wireguard configuration"
+      default: ""
+      type: volume
+      options:
