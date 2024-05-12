@@ -15,6 +15,9 @@ services:
     sysctls:
       - "net.ipv4.ip_forward=1"
       - "net.ipv4.conf.all.src_valid_mark=1"
+    expose:
+      - "51821/tcp/Wireguard Dashboard"
+      - "51820/udp/Wireguard VPN Channel UDP Socket"
 docs:
   logo_url: "https://raw.githubusercontent.com/swiftwave-org/app-store/main/assets/logos/wg-easy.png"
   name: "Wireguard Easy"
